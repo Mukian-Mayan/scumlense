@@ -29,6 +29,25 @@ class MyContainer extends StatelessWidget {
     this.imageFlex = 45,
   });
 
+  const MyContainer.compact({
+    Key? key,
+    String? imagePath,
+    String title = '',
+    String subtitle = '',
+    Color? color,
+    VoidCallback? onTap,
+  }) : this(
+          key: key,
+          imagePath: imagePath,
+          title: title,
+          subtitle: subtitle,
+          color: color,
+          onTap: onTap,
+          showTicks: false,
+          fontScale: 0.75,
+          imageFlex: 30,
+        );
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
